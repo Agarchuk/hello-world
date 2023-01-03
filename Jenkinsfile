@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo '${env.BUILD_ID}'
+                echo "${env.BUILD_ID}"
                 script{
                     sh 'docker build -t agarchuk/hello-world .'
                     sh 'docker push agarchuk/hello-world:latest'
