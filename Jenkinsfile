@@ -22,8 +22,7 @@ pipeline {
             steps {
                 echo 'hello world....'
                 script{
-                    sh 'apt get install docker'
-                    sh 'docker build -t agarchuk/ hello-world .'
+                    sh 'docker build -t agarchuk/hello-world .'
                 }
             }
         }
