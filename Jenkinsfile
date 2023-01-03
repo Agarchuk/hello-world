@@ -24,6 +24,7 @@ pipeline {
                 echo 'hello world....'
                 script{
                     sh 'docker build -t agarchuk/hello-world .'
+                    sh 'docker push agarchuk/hello-world:latest'
                 }
             }
         }
