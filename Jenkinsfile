@@ -1,9 +1,10 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3.8.6-eclipse-temurin-11'
-        }
-    }
+    agent any
+//     {
+//         docker {
+//             image 'maven:3.8.6-eclipse-temurin-11'
+//         }
+//     }
 
     stages {
         stage('Source') {
