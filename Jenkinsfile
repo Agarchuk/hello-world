@@ -1,10 +1,5 @@
 pipeline {
     agent any
-//     {
-//         docker {
-//             image 'maven:3.8.6-eclipse-temurin-11'
-//         }
-//     }
     tools {
         maven 'Maven-3.8.7'
     }
@@ -23,8 +18,8 @@ pipeline {
             steps {
                 echo '${env.BUILD_ID}'
                 script{
-                    sh 'docker build -t agarchuk/hello-world:${env.BUILD_ID} .'
-                    sh 'docker push agarchuk/hello-world:${env.BUILD_ID}'
+                    sh 'docker build -t agarchuk/hello-world.'
+                    sh 'docker push agarchuk/hello-world:latest'
                 }
             }
         }
