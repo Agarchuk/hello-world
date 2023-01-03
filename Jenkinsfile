@@ -23,8 +23,8 @@ pipeline {
             steps {
                 echo 'hello world....'
                 script{
-                    sh 'docker build -t agarchuk/hello-world .'
-                    sh 'docker push agarchuk/hello-world:latest'
+                    sh 'docker build -t agarchuk/hello-world:${env.BUILD_ID} .'
+                    sh 'docker push agarchuk/hello-world:${env.BUILD_ID}'
                 }
             }
         }
