@@ -21,6 +21,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'hello world....'
+                script{
+                    sh 'docker build -t agarchuk/ hello-world .'
+                }
             }
         }
         stage('Test') {
