@@ -5,6 +5,9 @@ pipeline {
 //             image 'maven:3.8.6-eclipse-temurin-11'
 //         }
 //     }
+    tools {
+        maven 'Maven-3.8.7'
+    }
 
     stages {
         stage('Source') {
