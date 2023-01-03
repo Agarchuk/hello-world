@@ -16,6 +16,7 @@ pipeline {
                sh 'git --version'
                git branch: 'main',
                    url: 'https://github.com/Agarchuk/hello-world.git'
+               sh 'mvn clean install'
             }
         }
         stage('Build') {
