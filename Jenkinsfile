@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'public.ecr.aws/docker/library/maven:latest' }
+        docker { image 'maven:3.3-jdk-8' }
     }
 
     stages {
